@@ -1,0 +1,118 @@
+import Image from "next/image";
+import React from "react";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+  FaPhone,
+  FaLocationArrow,
+} from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+
+import Skill from "./Skill";
+
+const Main = () => {
+  return (
+    <main className="flex flex-col items-center relative pb-50 min-h-screen h-fit">
+      <div className="flex pt-30 h-screen flex-col w-full items-center bg-gradient-to-b from-white/0 from-10% via-green-400/10 to-white/0">
+        <div className="text-3xl mt-10 text-gray-300">Hello</div>
+        <div className="text-3xl mt-1 ">
+          I'm <span className="text-yellow-500 text-4xl">Elvis</span>
+        </div>
+        <div className="text-3xl mt-1 text-gray-300">Web Developer</div>
+        <div className="flex justify-center  w-full mt-5">
+          <button className="cursor-pointer transition-all duration-500 text-sm flex m-3 rounded-4xl justify-center items-center w-[35%] h-12 bg-white/5 border-1 border-white text-white hover:bg-white hover hover:text-black">
+            Hire me
+          </button>
+          <button className="cursor-pointer transition-all duration-500 text-sm flex m-3 rounded-4xl justify-center items-center w-[35%] h-12 bg-green-700/10 border-1 border-green-500 hover:bg-green-500">
+            Projects
+          </button>
+        </div>
+
+        <div className="flex justify-center items-end relative h-70 w-70 m-10 mt-10 rounded-[50%] border-6 border-t-green-400 border-b-green-400 border-yellow-500 animate-pulse hover:animate-none">
+          <div className=" mx-auto flex items-center h-90 w-70 rounded-bl-[46%] rounded-br-[46%] overflow-hidden">
+            <img src="/elvis2.png" className="h-500 -mb-20 object-contain" />
+          </div>
+        </div>
+      </div>
+      <div className="aspect-square  w-full border-t-1 border-b-1 bg-gradient-to-bl to-50% from-white/3 to-green-300/2  mx-auto flex flex-col justify-start items-center py-10 border-green-600">
+        <div className="mb-5">About</div>
+        <div className="w-[80%] flex justify-center items-center">
+          I'm Elvis Anthony, a passionate full-stack web develover that leaves
+          in Abuja Nigeria
+        </div>
+      </div>
+      <div className="flex flex-col mx-auto my-10">Skills</div>
+
+      <div className="aspect-square w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400">
+        <div className="mb-5">FRONTEND</div>
+        <Skill name={"HTML"} progress={100} />
+        <Skill name={"CSS"} progress={75} />
+        <Skill name={"Javascript"} progress={75} />
+        <Skill name={"Tailwind"} progress={75} />
+        <Skill name={"Typescript"} progress={50} />
+      </div>
+      <div className="aspect-square mt-10 w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2  bg-white/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400">
+        <div className="mb-5">BACKEND</div>
+        <Skill name={"Node.js"} progress={75} />
+        <Skill name={"MongoDB"} progress={75} />
+        <Skill name={"SQL"} progress={50} />
+        <Skill name={"Tailwind"} progress={75} />
+        <Skill name={"Next.js"} progress={50} />
+      </div>
+      <div className="flex flex-col mx-auto my-10">CONTACT</div>
+      <div className="aspect-square text-sm w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2  bg-white/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400">
+        <div className="flex my-2 items-center w-[90%]">
+          <FaLinkedin className="w-[20%]  text-amber-200" />
+          <div> Elvis Anthony </div>
+        </div>
+        <div className="flex my-2 items-center w-[90%]">
+          <FaInstagram className="w-[20%]  text-amber-200" />
+          <div> Iam_elvizanthony </div>
+        </div>
+        <div className="flex my-2 items-center w-[90%]">
+          <FaPhone className="w-[20%]  text-amber-200 rotate-90" />
+          <div> +234 906 481 2779 </div>
+        </div>
+        <div className="flex my-2 items-center w-[90%]">
+          <FaLocationArrow className="w-[20%]  text-amber-200" />
+          <div> Abuja, Nigeria. </div>
+        </div>
+        <div className="flex my-2 items-center w-[90%]">
+          <BiLogoGmail className="w-[20%]  text-amber-200" />
+          <div> info.elvisanthony@gmail.com </div>
+        </div>
+      </div>
+      <div className="flex flex-col mx-auto my-10">MY PROJECTS</div>
+      <div className="relative aspect-[4/5] px-3 overflow-hidden w-[90%] border-1 bg-gradient-to-bl to-50% from-white/3 to-green-300/2 bg-white/2 shadow-3xl rounded-2xl ">
+        <div className="absolute top-0 left-0 w-full h-[40%] bg-white"></div>
+        <div className="text-xl mt-[60%] text-green-500 m-3">Lyric Church</div>
+        <div className="ml-3 h-[20%] w-[80%] ">
+          A website to display a church hello can we see the cap in the side of
+          the world
+        </div>
+        <div className="ml-3 flex items-center my-3 w-[80%]">
+          <div className="flex justify-center items-center w-20 h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
+            HTML
+          </div>
+          <div className="flex justify-center items-center min-w-20  w-fit h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
+            CSS
+          </div>
+          <div className="flex justify-center items-center min-w-20  w-fit h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
+            Javascript
+          </div>
+        </div>
+        <div className="ml-3 flex items-center my-3 w-[80%]">
+          <div className="flex px-4 justify-center items-center min-w-20  w-fit h-10 rounded-3xl border-1 text-sm mr-2 border-green-600">
+            Live Demo
+          </div>
+          <div className="flex px-2 justify-center items-center min-w-20  w-fit h-10 rounded-3xl border-1 text-sm mr-2 border-green-600">
+            Code
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default Main;
