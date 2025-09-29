@@ -11,6 +11,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaAngleUp } from "react-icons/fa";
 
 import Skill from "./Skill";
+import ProjectCard from "./ProjectCard";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,6 +42,11 @@ const Main = () => {
   const item2 = useScrollAnimation();
   const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
+  const item5 = useScrollAnimation();
+  const item6 = useScrollAnimation();
+  const item7 = useScrollAnimation();
+  const item8 = useScrollAnimation();
+
   const projectRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
   const [isButtonsVisible, setIsButtonVisble] = useState(false);
@@ -75,7 +81,7 @@ const Main = () => {
         <div
           className={`transition-all duration-700 ease-in flex justify-center ${
             isButtonsVisible ? "opacity-100" : "opacity-0"
-          }  w-full mt-5`}
+          }  w-full mt-1`}
         >
           <button className="cursor-pointer transition-all duration-500 text-sm flex m-3 rounded-4xl justify-center items-center w-[35%] h-15 bg-white/5 border-1 border-white text-white hover:bg-white hover hover:text-black">
             Hire me
@@ -89,7 +95,7 @@ const Main = () => {
         </div>
 
         <div className="flex justify-center items-end relative h-70 w-70 m-10 mt-10 rounded-[50%] border-6 border-t-green-400 border-b-green-400 border-yellow-500 animate-pulse hover:animate-none">
-          <div className=" mx-auto flex items-center h-90 w-70 rounded-bl-[46%] rounded-br-[46%] overflow-hidden">
+          <div className=" mx-auto flex items-center h-70 w-70 rounded-full overflow-hidden">
             <Image
               src="/elvis2.png"
               className="h-500 -mb-20 object-contain"
@@ -131,7 +137,14 @@ const Main = () => {
         <Skill name={"Tailwind"} progress={75} />
         <Skill name={"Typescript"} progress={50} />
       </div>
-      <div className="aspect-square mt-10 w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2  bg-white/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400">
+      <div
+        ref={item3.ref}
+        className={`transition-all duration-700 ease-in aspect-square w-[90%] bg-gradient-to-bl ${
+          item3.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        } to-50% from-white/3 to-green-300/2 border-1 mx-auto mt-10 flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400`}
+      >
         <div className="mb-5">BACKEND</div>
         <Skill name={"Node.js"} progress={75} />
         <Skill name={"MongoDB"} progress={75} />
@@ -140,7 +153,14 @@ const Main = () => {
         <Skill name={"Next.js"} progress={50} />
       </div>
       <div className="flex flex-col mx-auto my-10">CONTACT</div>
-      <div className="aspect-square text-sm w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2  bg-white/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400">
+      <div
+        ref={item4.ref}
+        className={`transition-all duration-700 ease-in ${
+          item4.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        } aspect-square text-sm w-[90%] bg-gradient-to-bl to-50% from-white/3 to-green-300/2  bg-white/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl border-gray-400`}
+      >
         <div className="flex my-2 items-center w-[90%]">
           <FaLinkedin className="w-[20%]  text-amber-200" />
           <div> Elvis Anthony </div>
@@ -165,32 +185,66 @@ const Main = () => {
       <div ref={projectRef} className="flex flex-col mx-auto my-10">
         MY PROJECTS
       </div>
-      <div className="relative aspect-[4/5] px-3 overflow-hidden w-[90%] border-1 bg-gradient-to-bl to-50% from-white/3 to-green-300/2 bg-white/2 shadow-3xl rounded-2xl ">
-        <div className="absolute top-0 left-0 w-full h-[40%] bg-white"></div>
-        <div className="text-xl mt-[60%] text-green-500 m-3">Lyric Church</div>
-        <div className="ml-3 h-[20%] w-[80%] ">
-          A website to display a church hello can we see the cap in the side of
-          the world
-        </div>
-        <div className="ml-3 flex items-center my-3 w-[80%]">
-          <div className="flex justify-center items-center w-20 h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
-            HTML
-          </div>
-          <div className="flex justify-center items-center min-w-20  w-fit h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
-            CSS
-          </div>
-          <div className="flex justify-center items-center min-w-20  w-fit h-8 rounded-3xl border-1 text-sm mr-2 border-green-600">
-            Javascript
-          </div>
-        </div>
-        <div className="ml-3 flex items-center my-3 w-[80%]">
-          <div className="flex px-4 justify-center items-center min-w-20  w-fit h-10 rounded-3xl border-1 text-sm mr-2 border-green-600">
-            Live Demo
-          </div>
-          <div className="flex px-2 justify-center items-center min-w-20  w-fit h-10 rounded-3xl border-1 text-sm mr-2 border-green-600">
-            Code
-          </div>
-        </div>
+      <div
+        ref={item5.ref}
+        className={`transition-all duration-700 ease-in ${
+          item5.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <ProjectCard
+          projectImageUrl="/lyricChurch.jpg"
+          projectTitle="Lyric Church"
+          projectDescription="A website to display a church hello can we see the
+        cap in the side of the world"
+        />
+      </div>
+      <div
+        ref={item6.ref}
+        className={`transition-all duration-700 ease-in ${
+          item6.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <ProjectCard
+          projectImageUrl="/texcom.jpg"
+          projectTitle="TexCom"
+          projectDescription="A website to display a church hello can we see the
+        cap in the side of the world"
+        />
+      </div>
+
+      <div
+        ref={item7.ref}
+        className={`transition-all duration-700 ease-in ${
+          item7.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <ProjectCard
+          projectImageUrl="/collabify.png"
+          projectTitle="Collabify"
+          projectDescription="A website to display a church hello can we see the
+        cap in the side of the world"
+        />
+      </div>
+      <div
+        ref={item8.ref}
+        className={`transition-all duration-700 ease-in ${
+          item8.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <ProjectCard
+          projectImageUrl="/rift.jpg"
+          projectTitle="Rift"
+          projectDescription="A website to display a church hello can we see the
+        cap in the side of the world"
+        />
       </div>
       <div
         onClick={handleScrollToTop}
