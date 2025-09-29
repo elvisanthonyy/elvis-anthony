@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import {
   FaInstagram,
-  FaFacebook,
   FaLinkedin,
   FaPhone,
   FaLocationArrow,
@@ -17,7 +16,7 @@ const Main = () => {
       <div className="flex pt-30 h-screen flex-col w-full items-center bg-gradient-to-b from-white/0 from-10% via-green-400/10 to-white/0">
         <div className="text-3xl mt-10 text-gray-300">Hello</div>
         <div className="text-3xl mt-1 ">
-          I'm <span className="text-yellow-500 text-4xl">Elvis</span>
+          I&apos;m <span className="text-yellow-500 text-4xl">Elvis</span>
         </div>
         <div className="text-3xl mt-1 text-gray-300">Web Developer</div>
         <div className="flex justify-center  w-full mt-5">
@@ -31,15 +30,19 @@ const Main = () => {
 
         <div className="flex justify-center items-end relative h-70 w-70 m-10 mt-10 rounded-[50%] border-6 border-t-green-400 border-b-green-400 border-yellow-500 animate-pulse hover:animate-none">
           <div className=" mx-auto flex items-center h-90 w-70 rounded-bl-[46%] rounded-br-[46%] overflow-hidden">
-            <img src="/elvis2.png" className="h-500 -mb-20 object-contain" />
+            <Image
+              src="/elvis2.png"
+              className="h-500 -mb-20 object-contain"
+              alt="my image"
+            />
           </div>
         </div>
       </div>
       <div className="aspect-square  w-full border-t-1 border-b-1 bg-gradient-to-bl to-50% from-white/3 to-green-300/2  mx-auto flex flex-col justify-start items-center py-10 border-green-600">
         <div className="mb-5">About</div>
         <div className="w-[80%] flex justify-center items-center">
-          I'm Elvis Anthony, a passionate full-stack web develover that leaves
-          in Abuja Nigeria
+          I&apos;m Elvis Anthony, a passionate full-stack web develover that
+          leaves in Abuja Nigeria
         </div>
       </div>
       <div className="flex flex-col mx-auto my-10">Skills</div>
