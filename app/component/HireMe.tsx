@@ -23,6 +23,8 @@ const HireMe = () => {
         if (res.data.message === "message sent") {
           alert("successful");
           reset();
+        } else {
+          alert("UnSuccessful");
         }
       })
       .catch((error) => {

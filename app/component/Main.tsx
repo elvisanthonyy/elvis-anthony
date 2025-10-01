@@ -75,7 +75,7 @@ const Main = () => {
       ref={topRef}
       className="flex flex-col items-center relative pb-50 min-h-screen h-fit"
     >
-      <div className="flex flex-col lg:flex-row pt-25 h-screen w-full items-center xl:justify-between lg:items-start bg-gradient-to-b from-white/0 from-10% via-green-400/10 to-white/0">
+      <div className="flex flex-col lg:flex-row pt-25 h-[dvh] w-full items-center xl:justify-between lg:items-start bg-gradient-to-b from-white/0 from-10% via-green-400/10 to-white/0">
         <div className="flex flex-col items-center xl:w-[50%] h-[90%] justify-center md:items-end">
           <div className="text-2xl lg:text-5xl mt-5 mb-2 md:mr-3 text-gray-300">
             <div className="mr-2">
