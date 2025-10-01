@@ -3,14 +3,14 @@ import mongoose from "mongoose";
 const connection: { isConnected?: number } = {};
 
 async function dbConnect() {
-  console.log(process.env.MONGO_LOCAL_URL);
+  console.log(process.env.MONGODB_URL);
   if (connection.isConnected) {
     console.log("connected");
     return;
   }
 
   try {
-    const db = await mongoose.connect(process.env.MONGO_LOCAL_URL!);
+    const db = await mongoose.connect(process.env.MONGODB_URL!);
 
     connection.isConnected = db.connections[0].readyState;
     console.log("connected");

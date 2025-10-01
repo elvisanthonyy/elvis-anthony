@@ -6,6 +6,12 @@
   --color-taskGrey: #242424;
 }
 
+@theme {
+  --color-first: #1a73e8;
+  --breakpoint-sm: 390px;
+  --breakpoint-md: 520px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
