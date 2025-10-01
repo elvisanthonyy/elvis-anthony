@@ -19,6 +19,7 @@ function useScrollAnimation() {
 
   const [isVisible, setIsVisble] = useState(false);
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -32,7 +33,7 @@ function useScrollAnimation() {
     if (ref.current) observer.observe(ref.current);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -67,7 +68,7 @@ const Main = () => {
 
   useEffect(() => {
     setIsButtonVisble(true);
-  });
+  }, []);
 
   return (
     <main

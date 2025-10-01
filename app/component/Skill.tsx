@@ -1,5 +1,3 @@
-import React, { useRef, useState } from "react";
-
 interface ChildProps {
   progress: number;
   name: string;

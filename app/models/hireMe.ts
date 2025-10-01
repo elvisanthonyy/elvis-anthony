@@ -1,4 +1,4 @@
-import mongoose, { Schema, models, Document } from "mongoose";
+import mongoose, { models, Document } from "mongoose";
 
 export interface IHireMe extends Document {
   name: string;

@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import axios from "axios";
-import { error } from "console";
 
 type FormFields = {
   name: string;
@@ -27,7 +25,7 @@ const HireMe = () => {
           reset();
         }
       })
-      .catch((error: any) => {
+      .catch((error) => {
         console.log(error);
       });
   };
