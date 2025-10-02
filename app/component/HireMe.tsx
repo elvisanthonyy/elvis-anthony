@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import LoadingH from "./LoadingH";
 import { toast } from "react-toastify";
@@ -39,9 +39,18 @@ const HireMe = () => {
       });
   };
 
+  useEffect(() => {
+    if (loading) {
+      document.body.classList.add("overflow-y-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-y-hidden");
+    };
+  }, [loading]);
+
   return (
     <form
-      className="flex flex-col w-[90%] mx-auto min-h-100 h-fit"
+      className="flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20"
       onSubmit={handleSubmit(onSubmit)}
     >
       {loading && <LoadingH />}
