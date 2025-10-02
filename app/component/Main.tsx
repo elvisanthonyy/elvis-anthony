@@ -173,6 +173,7 @@ const Main = () => {
           <Skill name={"SQL"} progress={50} />
           <Skill name={"Tailwind"} progress={75} />
           <Skill name={"Next.js"} progress={50} />
+          <Skill name={"Express.js"} progress={75} />
         </div>
         <div
           ref={item9.ref}
@@ -182,12 +183,11 @@ const Main = () => {
               : "opacity-0 translate-y-10"
           } to-50% from-white/3 to-green-300/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl mb-10 lg:mb-0 border-gray-400`}
         >
-          <div className="mb-5">BACKEND</div>
-          <Skill name={"Node.js"} progress={75} />
-          <Skill name={"MongoDB"} progress={75} />
-          <Skill name={"SQL"} progress={50} />
-          <Skill name={"Tailwind"} progress={75} />
-          <Skill name={"Next.js"} progress={50} />
+          <div className="mb-5">OTHERS</div>
+          <Skill name={"GIT"} progress={75} />
+          <Skill name={"Figma"} progress={75} />
+          <Skill name={"Photoshop"} progress={75} />
+          <Skill name={"Illustrator"} progress={75} />
         </div>
       </div>
       <div ref={projectRef} className="flex flex-col mx-auto my-10">
@@ -301,7 +301,6 @@ const Main = () => {
         HIRE ME
       </div>
       <HireMe />
-      <div>Hello</div>
     </main>
   );
 };
