@@ -49,6 +49,7 @@ const Main = () => {
   const item6 = useScrollAnimation();
   const item7 = useScrollAnimation();
   const item8 = useScrollAnimation();
+  const item9 = useScrollAnimation();
 
   const hireMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
@@ -174,9 +175,9 @@ const Main = () => {
           <Skill name={"Next.js"} progress={50} />
         </div>
         <div
-          ref={item3.ref}
+          ref={item9.ref}
           className={`transition-all duration-700 ease-in  aspect-square w-[90%] md:h-80 bg-gradient-to-bl ${
-            item3.isVisible
+            item9.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
           } to-50% from-white/3 to-green-300/2 border-1 mx-auto flex flex-col justify-start py-10 items-center rounded-3xl mb-10 lg:mb-0 border-gray-400`}
@@ -300,6 +301,7 @@ const Main = () => {
         HIRE ME
       </div>
       <HireMe />
+      <div>Hello</div>
     </main>
   );
 };
