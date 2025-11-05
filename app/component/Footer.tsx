@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex px-5 flex-col items-start justify-evenly text-black bg-white w-full h-100">
+    <footer className="flex px-5 flex-col items-start justify-evenly text-white bg-light-black w-full h-100">
       <div className="text-2xl font-bold">Elvis Anthony</div>
       <div>Bringing prodicts to life</div>
       <div className="h-30 flex flex-col justify-between">
@@ -12,7 +12,7 @@ const Footer = () => {
         <div>Projects</div>
         <div>Contact</div>
       </div>
-      <div className="w-[25%] text-xl text-green-800 justify-between flex h-10">
+      <div className="w-[25%] text-xl text-amber-300 justify-between flex h-10">
         <FaInstagram />
         <FaFacebook />
         <FaLinkedin />

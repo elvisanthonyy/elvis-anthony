@@ -1,13 +1,20 @@
+"use client";
 import React from "react";
-import { MdMenu } from "react-icons/md";
 
-const Nav = () => {
+interface ChildProps {
+  contact: () => void;
+}
+
+const Nav = ({ contact }: ChildProps) => {
   return (
-    <nav className="flex bg-white/0 backdrop-blur-3xl text-3xl justify-between items-center z-10 px-[5%] fixed top-0 left-0 w-full h-18">
-      <div className="">
-        Elv<span className="text-yellow-500">is An</span>thony
-      </div>
-      <MdMenu className="text-3xl" />
+    <nav className="flex absolute top-5 left-[50%] -translate-x-[50%] justify-between rounded-2xl items-center z-10 pl-[5%] w-[90%] md:w-[60%] h-11 md:h-13 bg-nav-gray">
+      <div className="text-sm serif-font">Elvis Anthony</div>
+      <button
+        onClick={() => contact()}
+        className="h-full w-27 rounded-2xl bg-light-black text-sm text-white"
+      >
+        Contact Me
+      </button>
     </nav>
   );
 };

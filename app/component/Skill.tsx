@@ -6,28 +6,17 @@ interface ChildProps {
 const Skill = ({ progress, name }: ChildProps) => {
   return (
     <div className="px-5 flex my-2 justify-start items-center w-[90%] h-5">
-      <div className="w-[75%] text-md text-gray-200">{name}</div>
-      <div className="flex justify-between items-center">
-        <span
-          className={`w-3 h-3   ${
-            progress >= 25 ? "bg-amber-300/25" : "bg-gray-600/20"
-          } rounded-full  mx-1`}
-        ></span>
-        <span
-          className={`w-3 h-3  ${
-            progress >= 50 ? "bg-amber-300/50" : "bg-gray-600/20"
-          } rounded-full  mx-1`}
-        ></span>
-        <span
-          className={`w-3 h-3 ${
-            progress >= 75 ? "bg-green-500/70" : "bg-gray-600/20"
-          } rounded-full  mx-1`}
-        ></span>
-        <span
-          className={`w-3 h-3  ${
-            progress >= 100 ? "bg-green-500" : "bg-gray-600/20"
-          } rounded-full  mx-1`}
-        ></span>
+      <div className="w-[70%] text-lighter-black text-md ">{name}</div>
+      <div className="flex  rounded-2xl overflow-hidden w-[30%] h-2 bg-gray-200">
+        {progress === 100 ? (
+          <div
+            className={`flex rounded-2xl w-full h-2 bg-gradient-to-l from-blue-400 to-blue-800`}
+          ></div>
+        ) : (
+          <div
+            className={`flex rounded-2xl w-[${progress.toString()}%] h-2 bg-gradient-to-l from-blue-400 to-blue-800`}
+          ></div>
+        )}
       </div>
     </div>
   );
