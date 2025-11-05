@@ -218,7 +218,7 @@ const Main = () => {
             projectTitle="Lyric Church"
             projectDescription="A website to display a church information, activities, and to keep you updated on programs and series. Tt was made using HTML, CSS and Javascript"
             demoUrl="https://lyricchurch.com.ng"
-            codeUrl="https://github.com/elvisanthony/lyricchurch"
+            codeUrl="https://github.com/elvisanthonyy/lyricchurch"
           />
         </div>
         <div
@@ -234,7 +234,7 @@ const Main = () => {
             projectTitle="TexCom"
             projectDescription="A website to see most popular phone and Laptop brand's latest release with most important spec. This was made using HTML, CSS, and Javascript"
             demoUrl="https://elvisanthonyy.github.io/texcom"
-            codeUrl="https://github.com/elvisanthony/texcom"
+            codeUrl="https://github.com/elvisanthonyy/texcom"
           />
         </div>
 
@@ -251,7 +251,7 @@ const Main = () => {
             projectTitle="Collabify"
             projectDescription="A a demo website to allow creators and businesses sign up for a waitlist that would enable collaboration. This was built using React"
             demoUrl="https://elvisanthonyy.github.io/collabify"
-            codeUrl="https://github.com/elvisanthony/collabiy"
+            codeUrl="https://github.com/elvisanthonyy/collabiy"
           />
         </div>
         <div
@@ -267,7 +267,7 @@ const Main = () => {
             projectTitle="Rift"
             projectDescription="A Full-Stack application made with, Node.js, Express.js and MongoDB on the backend and React.js on the frontend. This website allows users to create account send messages, create, like and view posts."
             demoUrl="https://rift-client-vercel.app"
-            codeUrl="https://github.com/elvisanthony/rift"
+            codeUrl="https://github.com/elvisanthonyy/rift"
           />
         </div>
       </div>
