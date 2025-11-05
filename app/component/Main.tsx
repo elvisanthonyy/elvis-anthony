@@ -76,7 +76,7 @@ const Main = () => {
       ref={topRef}
       className="flex flex-col items-center relative min-h-screen h-fit"
     >
-      <Nav contact={() => handleScrollToHireMe()} />
+      <Nav contact={() => handleScrollToHireMe?.()} />
       <div className="block mt-5 pt-25 md:pt-30 md:mb-8 h-fit w-full md:w-[65%] items-center justify-center">
         <div className="flex justify-center mx-auto relative w-[90%] h-fit">
           <div className="flex items-center  text-5xl md:text-9xl serif-font font-medium text-darkGray">
@@ -87,7 +87,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="relative -top-3 md:-top-8 shadow-2xl/8 mx-auto shrink-0 flex w-[90%] lg:w-[95] overflow-hidden  border-2 border-white rounded-2xl text-black flex-col bg-white items-center xl:w-full h-100 md:h-120 justify-start">
+        <div className="relative -top-3 md:-top-8 shadow-2xl/4 mx-auto shrink-0 flex w-[90%] lg:w-[95] overflow-hidden  border-2 border-white rounded-2xl text-black flex-col bg-white items-center xl:w-full h-100 md:h-120 justify-start">
           <div className="w-full h-22 md:h-33 bg-back-gray"></div>
           <div className="flex w-full h-17 items-center justify-end">
             <div className="flex w-[52%] md:w-[20%]  h-full items-center justify-between pr-3 px-1">
@@ -148,7 +148,7 @@ const Main = () => {
       <div className="flex mt-7 flex-col w-full lg:px-[3%] lg:grid lg:h-fit lg:gap-y-10 md:gap-x-0 md:place-content-center lg:place-content-center lg:grid-cols-2 lg:w-[75%] justify-center items-center">
         <div
           ref={item2.ref}
-          className={`transition-all shadow-2xl/8  duration-700 lg:mx-auto ease-in aspect-square w-[90%] md:h-80 ${
+          className={`transition-all shadow-2xl/4  duration-700 lg:mx-auto ease-in aspect-square w-[90%] md:h-80 ${
             item2.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
@@ -165,7 +165,7 @@ const Main = () => {
         </div>
         <div
           ref={item3.ref}
-          className={`transition-all shadow-2xl/8  duration-700 ease-in  aspect-square w-[90%] md:h-80  ${
+          className={`transition-all shadow-2xl/4  duration-700 ease-in  aspect-square w-[90%] md:h-80  ${
             item3.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
@@ -183,7 +183,7 @@ const Main = () => {
         </div>
         <div
           ref={item9.ref}
-          className={`transition-all shadow-2xl/8  duration-700 ease-in  aspect-square w-[90%] md:h-80  ${
+          className={`transition-all shadow-2xl/4  duration-700 ease-in  aspect-square w-[90%] md:h-80  ${
             item9.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"

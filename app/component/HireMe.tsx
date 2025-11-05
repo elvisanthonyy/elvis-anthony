@@ -50,7 +50,7 @@ const HireMe = () => {
 
   return (
     <form
-      className="bg-white rounded-2xl shadow-2xl/8 lg:w-[65%]  flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20 px-4 pb-5"
+      className="bg-white rounded-2xl shadow-2xl/4 lg:w-[65%]  flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20 px-4 pb-5"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex w-full mb-5 text-lg text-light-black font-semibold items-center  flex-col mx-auto my-3 mt-7">

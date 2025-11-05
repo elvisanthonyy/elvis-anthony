@@ -18,7 +18,7 @@ const ProjectCard = ({
   codeUrl,
 }: ChildProps) => {
   return (
-    <div className="relative flex shadow-2xl/8  flex-col md:flex-row lg:flex-col aspect-[5/6] mb-10 mx-auto overflow-hidden w-[90%] lg:h-120  md:h-75 lg:w-full xl:flex-row xl:h-80 md:aspect-auto h-fit bg-white shadow-3xl rounded-2xl ">
+    <div className="relative flex shadow-2xl/4  flex-col md:flex-row lg:flex-col aspect-[5/6] mb-10 mx-auto overflow-hidden w-[90%] lg:h-120  md:h-75 lg:w-full xl:flex-row xl:h-80 md:aspect-auto h-fit bg-white shadow-3xl rounded-2xl ">
       <div className="flex mt-2 w-[95%] mx-auto rounded-tl-xl rounded-tr-xl justify-center items-start overflow-hidden  h-[40%] md:h-full lg:h-[50%] lg:w-full bg-amber-400 md:w-[50%] xl:w-[50%] xl:h-full ">
         <Image
           src={projectImageUrl}
