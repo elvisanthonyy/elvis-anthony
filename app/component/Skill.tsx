@@ -14,7 +14,7 @@ const Skill = ({ progress, name }: ChildProps) => {
           ></div>
         ) : (
           <div
-            className={`flex rounded-2xl w-[${progress.toString()}%] h-2 bg-gradient-to-l from-blue-400 to-blue-800`}
+            className={`flex rounded-2xl w-[60%] h-2 bg-gradient-to-l from-blue-400 to-blue-800`}
           ></div>
         )}
       </div>

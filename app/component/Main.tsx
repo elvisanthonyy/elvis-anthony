@@ -1,12 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaPhone,
-  FaLocationArrow,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaAngleUp } from "react-icons/fa";
@@ -46,7 +41,7 @@ function useScrollAnimation() {
 }
 
 const Main = () => {
-  const item1 = useScrollAnimation();
+  //const item1 = useScrollAnimation();
   const item2 = useScrollAnimation();
   const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
@@ -59,10 +54,10 @@ const Main = () => {
   const hireMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
-  const [isButtonsVisible, setIsButtonVisble] = useState(false);
-  const handleScrollToProject = () => {
+  //const [isButtonsVisible, setIsButtonVisble] = useState(false);
+  /*const handleScrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  };*/
 
   const handleScrollToHireMe = () => {
     hireMeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -73,7 +68,7 @@ const Main = () => {
   };
 
   useEffect(() => {
-    setIsButtonVisble(true);
+    //setIsButtonVisble(true);
   }, []);
 
   return (
@@ -120,9 +115,9 @@ const Main = () => {
             </div>
           </div>
           <div className="w-full md:w-[95%]  md:mr-auto mt-2 h-25 text-sm md:text-lg text-lighter-black px-4">
-            I'm Elvis, a full-stack web developer based in Abuja, Nigeria. I
-            build apps end-to-end-clean code, clear and fast delivery. My focus:
-            perfromance, accessibility, and scalability.
+            I&apos;m Elvis, a full-stack web developer based in Abuja, Nigeria.
+            I build apps end-to-end-clean code, clear and fast delivery. My
+            focus: perfromance, accessibility, and scalability.
           </div>
           <div className="flex items-center text-sm text-lighter-black px-6 w-full h-10">
             <div className="flex h-9 items-center mr-5">
