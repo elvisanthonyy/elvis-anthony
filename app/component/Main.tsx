@@ -266,7 +266,7 @@ const Main = () => {
             projectImageUrl="/rift.jpg"
             projectTitle="Rift"
             projectDescription="A Full-Stack application made with, Node.js, Express.js and MongoDB on the backend and React.js on the frontend. This website allows users to create account send messages, create, like and view posts."
-            demoUrl="https://rift-client-vercel.app"
+            demoUrl="https://rift-client.vercel.app"
             codeUrl="https://github.com/elvisanthonyy/rift"
           />
         </div>
