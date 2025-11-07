@@ -10,8 +10,9 @@
   --color-first: #1a73e8;
   --breakpoint-sm: 390px;
   --breakpoint-md: 520px;
-  --color-nav-gray: #e0e0e0;
-  --color-back-gray: #f3f3f3;
+  --breakpoint-smd: 620px;
+  --color-nav-gray: #e7e7e7;
+  --color-back-gray: #f8f8f8;
   --color-darkGray: #8d8d8d;
   --color-darkerGray: #303030;
   --color-light-black: #1b1b1b;
@@ -33,16 +34,28 @@
 }
 
 body {
-  background: #f3f3f3;
+  background-color: #f8f8f8;
   color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.dark body {
+  background-color: #1b1b1b;
+}
+
 .filt {
-  color: #e0e0e0;
+  color: #e7e7e7;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .serif-font {
-  font-family: "Times New Roman", Times, serif;
+  font-family: serif;
+}
+
+.font-e-light {
+  font-weight: 100;
+}
+
+* {
+  transition: all 0.5s ease-in-out;
 }

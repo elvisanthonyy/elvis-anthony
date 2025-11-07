@@ -1,14 +1,15 @@
-import Nav from "./component/Nav";
 import Main from "./component/Main";
 import Footer from "./component/Footer";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default async function Home() {
   return (
     <>
       <div>
-        <Nav />
-        <Main />
-        <Footer />
+        <ThemeProvider>
+          <Main />
+          <Footer />
+        </ThemeProvider>
       </div>
     </>
   );

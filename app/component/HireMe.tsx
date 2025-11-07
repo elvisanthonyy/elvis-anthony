@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import LoadingH from "./LoadingH";
 import { toast } from "react-toastify";
+import { useTheme } from "../context/ThemeContext";
 
 type FormFields = {
   name: string;
@@ -13,6 +14,7 @@ type FormFields = {
 
 const HireMe = () => {
   const [loading, setLoading] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const {
     register,
     handleSubmit,
@@ -50,10 +52,16 @@ const HireMe = () => {
 
   return (
     <form
-      className="bg-white rounded-2xl shadow-2xl/4 lg:w-[65%]  flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20 px-4 pb-5"
+      className={`${
+        theme === "light" ? "bg-white" : "bg-lighter-black"
+      }  rounded-2xl shadow-2xl/4 lg:w-[60%]  flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20 px-4 pb-5`}
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex w-full mb-5 text-lg text-light-black font-semibold items-center  flex-col mx-auto my-3 mt-7">
+      <div
+        className={`flex w-full mb-5 text-lg ${
+          theme === "light" ? "text-lighter-black" : "text-white"
+        }  font-semibold items-center  flex-col mx-auto my-3 mt-7`}
+      >
         HIRE ME
       </div>
       {loading && <LoadingH />}
@@ -70,10 +78,14 @@ const HireMe = () => {
         })}
         type="text"
         placeholder="Name"
-        className="my-3 text-lighter-black bg-back-gray px-3 text-sm rounded-xl h-10 focus:outline-none  focus:border-green-500"
+        className={`my-2  ${
+          theme === "light"
+            ? "text-lighter-black bg-back-gray"
+            : "bg-darkerGray text-back-gray"
+        } md:w-[80%] lg:w-[50%] md:mx-auto  px-3 text-sm rounded-xl h-10 focus:outline-none focus:border-1 focus:border-green-500`}
       />
       {errors.name && (
-        <div className="text-red-600 font-thin text-sm px-2">
+        <div className="text-red-600 md:w-[50%] md:mx-auto text-sm px-2">
           {errors.name?.message}
         </div>
       )}
@@ -86,10 +98,14 @@ const HireMe = () => {
           },
         })}
         placeholder="Email"
-        className="bg-back-gray text-lighter-black my-3 px-3 text-sm rounded-xl h-10 focus:outline-none focus:border-green-500"
+        className={`my-2  ${
+          theme === "light"
+            ? "text-lighter-black bg-back-gray"
+            : "bg-darkerGray text-back-gray"
+        } md:w-[80%] lg:w-[50%] md:mx-auto  px-3 text-sm rounded-xl h-10 focus:outline-none focus:border-1 focus:border-green-500`}
       />
       {errors.email && (
-        <div className="text-red-600 font-thin text-sm px-2">
+        <div className="text-red-600 md:w-[50%] md:mx-auto text-sm px-2">
           {errors.email?.message}
         </div>
       )}
@@ -97,14 +113,18 @@ const HireMe = () => {
         {...register("serviceType", {
           required: "Srvice type is required",
         })}
-        className="bg-back-gray text-lighter-black my-1 px-3 text-sm rounded-xl h-10 focus:outline-none focus:border-green-500"
+        className={`my-2 ${
+          theme === "light"
+            ? "text-lighter-black bg-back-gray"
+            : "bg-darkerGray text-back-gray"
+        } md:w-[80%] lg:w-[50%] md:mx-auto  px-3 text-sm rounded-xl h-10 focus:outline-none focus:border-1 focus:border-green-500`}
       >
         <option value="service">Service</option>
         <option value="collaboration">Collaboration</option>
         <option value="tutoring">Tutoring</option>
       </select>
       {errors.serviceType && (
-        <div className="text-red-600 font-thin text-sm px-2">
+        <div className="text-red-600 md:w-[50%] md:mx-auto text-sm px-2">
           {errors.serviceType?.message}
         </div>
       )}
@@ -113,16 +133,24 @@ const HireMe = () => {
           required: "message is required",
         })}
         placeholder="Message"
-        className="bg-back-gray my-3 p-3 text-lighter-black text-sm rounded-xl h-30 focus:outline-none focus:border-green-500"
+        className={`my-2  ${
+          theme === "light"
+            ? "text-lighter-black bg-back-gray"
+            : "bg-darkerGray text-back-gray"
+        } md:w-[80%] lg:w-[50%] md:mx-auto  px-3 text-sm rounded-xl h-30 focus:outline-none focus:border-1 focus:border-green-500`}
       />
       {errors.message && (
-        <div className="text-red-600 font-thin text-sm px-2">
+        <div className="text-red-600 md:w-[50%] md:mx-auto text-sm px-2">
           {errors.message?.message}
         </div>
       )}
       <button
         type="submit"
-        className="flex cursor-pointer transition-all duration-500 ease-in justify-center items-center my-3 rounded-xl hover:rounded-[8em] h-10 bg-light-black text-white"
+        className={`flex cursor-pointer md:w-[80%] lg:w-[50%] w-full mx-auto my-10 transition-all duration-500 ease-in-out justify-center items-center rounded-2xl hover:rounded-4xl h-12 ${
+          theme === "light"
+            ? "bg-light-black text-nav-gray"
+            : "text-light-black bg-nav-gray"
+        } `}
       >
         Send message
       </button>
