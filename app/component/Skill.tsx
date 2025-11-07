@@ -30,7 +30,7 @@ const Skill = ({ progress, name }: ChildProps) => {
         } `}
       >
         <div
-          className={`flex rounded-2xl ${len} h-full bg-gradient-to-l from-blue-400 to-blue-800`}
+          className={`flex rounded-2xl ${len} h-full ${theme === 'light' ? 'bg-gradient-to-l from-blue-400 to-blue-800' : 'bg-white'} `}
         ></div>
       </div>
     </div>
