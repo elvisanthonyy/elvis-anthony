@@ -102,7 +102,7 @@ const Main = () => {
         >
           <div
             className={`w-full h-22 md:h-33 ${
-              theme === "light" ? "bg-back-gray" : "bg-darkerGray"
+              theme === "light" ? "bg-back-gray" : "bg-light-black"
             } `}
           ></div>
           <div className="flex w-full h-17 md:h-20 items-center justify-end">
