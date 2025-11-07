@@ -82,7 +82,7 @@ const Main = () => {
       <div className="block mt-5 pt-25 md:pt-30 md:mb-8 h-fit w-full md:w-full lg:w-[60%] items-center justify-center">
         <div className="flex justify-center mx-auto relative w-fit h-fit">
           <div
-            className={`flex items-center font-light font-e-light text-5xl sm:text-[3.5em] lg:text-8xl xl:text-9xl md:text-7xl smd:text-[5em] serif-font ${
+            className={`flex items-center font-light font-e-light text-5xl sm:text-[3.2em] lg:text-8xl xl:text-9xl md:text-7xl smd:text-[5em] serif-font ${
               theme === "light" ? "text-darkGray" : "text-lighter-black"
             } `}
           >
