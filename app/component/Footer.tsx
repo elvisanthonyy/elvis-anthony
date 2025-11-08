@@ -3,7 +3,12 @@ import { useTheme } from "../context/ThemeContext";
 import React from "react";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+interface ChildProps {
+  project?: () => void;
+  myContact?: () => void;
+}
+
+const Footer = ({ project, myContact }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <footer
@@ -15,7 +20,7 @@ const Footer = () => {
     >
       <div className="text-xl font-bold">Elvis Anthony</div>
       <div className="text-md">
-        Bringing prodicts to life one pixel at a time
+        Bringing products to life one pixel at a time
       </div>
       <div className="md:flex md:mt-20 md:w-full md:justify-between">
         <div className="h-30 md:h-10 flex flex-col md:flex-row md:w-[20%] justify-between">
@@ -41,10 +46,16 @@ const Footer = () => {
           >
             About
           </div>
-          <div className="transition-all duration-300 ease-in cursor-pointer text-sm hover:text-md hover:text-blue-300">
+          <div
+            onClick={project}
+            className="transition-all duration-300 ease-in cursor-pointer text-sm hover:text-md hover:text-blue-300"
+          >
             Projects
           </div>
-          <div className="transition-all duration-300 ease-in cursor-pointer text-sm hover:text-md hover:text-blue-300">
+          <div
+            onClick={myContact}
+            className="transition-all duration-300 ease-in cursor-pointer text-sm hover:text-md hover:text-blue-300"
+          >
             Contact
           </div>
         </div>

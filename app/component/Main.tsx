@@ -14,6 +14,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { TbBriefcase } from "react-icons/tb";
 import Nav from "./Nav";
 import { useTheme } from "../context/ThemeContext";
+import Footer from "./Footer";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -55,11 +56,16 @@ const Main = () => {
 
   const hireMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
   //const [isButtonsVisible, setIsButtonVisble] = useState(false);
-  /*const handleScrollToProject = () => {
+  const handleScrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };*/
+  };
+
+  const handleScrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleScrollToHireMe = () => {
     hireMeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -329,87 +335,93 @@ const Main = () => {
         <FaAngleUp />
       </div>
 
-      <div
-        ref={item4.ref}
-        className={`transition-all duration-700 ease-in ${
-          item4.isVisible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        } ${
-          theme === "light" ? "bg-white" : "bg-lighter-black"
-        } aspect-square text-sm w-full lg:w-[60%]  mx-auto flex flex-col justify-start lg:justify-center lg:h-95 py-10 md:py-0 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
-      >
+      <div ref={contactRef} className="w-full">
         <div
-          className={`flex flex-col mx-auto pb-5 md:pb-0 text-lg ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  font-semibold`}
+          ref={item4.ref}
+          className={`transition-all duration-700 ease-in ${
+            item4.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          } ${
+            theme === "light" ? "bg-white" : "bg-lighter-black"
+          } aspect-square text-sm w-full lg:w-[60%]  mx-auto flex flex-col justify-start lg:justify-center lg:h-95 py-10 md:py-0 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
         >
-          CONTACT
-        </div>
-        <div
-          className={`flex my-3 text-md ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  items-center w-[90%] lg:w-full`}
-        >
-          <FaLinkedin
-            className={`w-[20%] text-lg ${
-              theme === "light" ? "text-light-black" : "text-white"
-            }  `}
-          />
-          <div> Elvis Anthony </div>
-        </div>
-        <div
-          className={`flex my-3 text-md ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  items-center w-[90%] lg:w-full`}
-        >
-          <FaInstagram
-            className={`w-[20%] text-lg ${
-              theme === "light" ? "text-light-black" : "text-white"
-            }  `}
-          />
-          <div> Iam_elvizanthony </div>
-        </div>
-        <div
-          className={`flex my-3 text-md ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  items-center w-[90%] lg:w-full`}
-        >
-          <FaPhone
-            className={`w-[20%] text-lg ${
-              theme === "light" ? "text-light-black" : "text-white"
-            }  `}
-          />
-          <div> +234 906 481 2779 </div>
-        </div>
-        <div
-          className={`flex my-3 text-md ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  items-center w-[90%] lg:w-full`}
-        >
-          <HiOutlineLocationMarker
-            className={`w-[20%] text-lg ${
-              theme === "light" ? "text-light-black" : "text-white"
-            }  `}
-          />
-          <div> Abuja, Nigeria. </div>
-        </div>
-        <div
-          className={`flex my-3 text-md ${
-            theme === "light" ? "text-lighter-black" : "text-white"
-          }  items-center w-[90%] lg:w-full`}
-        >
-          <BiLogoGmail
-            className={`w-[20%] text-lg ${
-              theme === "light" ? "text-light-black" : "text-white"
-            }  `}
-          />
-          <div> info.elvisanthony@gmail.com </div>
+          <div
+            className={`flex flex-col mx-auto pb-5 md:pb-0 text-lg ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  font-semibold`}
+          >
+            CONTACT
+          </div>
+          <div
+            className={`flex my-3 text-md ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  items-center w-[90%] lg:w-full`}
+          >
+            <FaLinkedin
+              className={`w-[20%] text-lg ${
+                theme === "light" ? "text-light-black" : "text-white"
+              }  `}
+            />
+            <div> Elvis Anthony </div>
+          </div>
+          <div
+            className={`flex my-3 text-md ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  items-center w-[90%] lg:w-full`}
+          >
+            <FaInstagram
+              className={`w-[20%] text-lg ${
+                theme === "light" ? "text-light-black" : "text-white"
+              }  `}
+            />
+            <div> Iam_elvizanthony </div>
+          </div>
+          <div
+            className={`flex my-3 text-md ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  items-center w-[90%] lg:w-full`}
+          >
+            <FaPhone
+              className={`w-[20%] text-lg ${
+                theme === "light" ? "text-light-black" : "text-white"
+              }  `}
+            />
+            <div> +234 906 481 2779 </div>
+          </div>
+          <div
+            className={`flex my-3 text-md ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  items-center w-[90%] lg:w-full`}
+          >
+            <HiOutlineLocationMarker
+              className={`w-[20%] text-lg ${
+                theme === "light" ? "text-light-black" : "text-white"
+              }  `}
+            />
+            <div> Abuja, Nigeria. </div>
+          </div>
+          <div
+            className={`flex my-3 text-md ${
+              theme === "light" ? "text-lighter-black" : "text-white"
+            }  items-center w-[90%] lg:w-full`}
+          >
+            <BiLogoGmail
+              className={`w-[20%] text-lg ${
+                theme === "light" ? "text-light-black" : "text-white"
+              }  `}
+            />
+            <div> info.elvisanthony@gmail.com </div>
+          </div>
         </div>
       </div>
       <div ref={hireMeRef} className="flex w-full mx-auto my-10">
         <HireMe />
       </div>
+      <Footer
+        project={handleScrollToProject}
+        myContact={handleScrollToContact}
+      />
     </main>
   );
 };

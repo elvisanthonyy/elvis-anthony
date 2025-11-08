@@ -8,7 +8,6 @@ export default async function Home() {
       <div>
         <ThemeProvider>
           <Main />
-          <Footer />
         </ThemeProvider>
       </div>
     </>
