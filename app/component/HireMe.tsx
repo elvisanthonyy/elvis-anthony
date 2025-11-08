@@ -14,7 +14,7 @@ type FormFields = {
 
 const HireMe = () => {
   const [loading, setLoading] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const {
     register,
     handleSubmit,

@@ -26,8 +26,8 @@ const Footer = ({ project, myContact }: ChildProps) => {
             <span className="block mb-2 font-semibold italic">
               Bringing products to life one pixel at a time
             </span>{" "}
-            I'm Elvis, a full-stack web developer based in Abuja, Nigeria. I
-            build apps end-to-end-clean code, clear and fast delivery.
+            I&apos;m Elvis, a full-stack web developer based in Abuja, Nigeria.
+            I build apps end-to-end-clean code, clear and fast delivery.
           </div>
         </div>
 
