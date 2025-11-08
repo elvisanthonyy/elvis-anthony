@@ -9,6 +9,7 @@ import Skill from "./Skill";
 import ProjectCard from "./ProjectCard";
 import HireMe from "./HireMe";
 import { FaXTwitter, FaBehance } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
 import { HiCheckBadge } from "react-icons/hi2";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { TbBriefcase } from "react-icons/tb";
@@ -113,18 +114,30 @@ const Main = () => {
           ></div>
           <div className="flex w-full h-17 md:h-20 items-center justify-end">
             <div className="flex w-[52%] md:w-[35%] h-full items-center justify-between pr-3 px-1">
-              <div className="flex justify-center text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
-                <FaBehance className="text-lighter-black" />
-              </div>
-              <div className="flex justify-center text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
-                <FaXTwitter className="text-lighter-black" />
-              </div>
-              <div className="flex justify-center text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
-                <FaLinkedinIn className="text-lighter-black" />
-              </div>
-              <div className="flex justify-center text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
-                <FaLinkedinIn className="text-lighter-black" />
-              </div>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/elvis-anthony-84639a265"
+              >
+                <div className="flex justify-center transition-all duration-300 hover:opacity-75 text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
+                  <FaLinkedinIn className="text-lighter-black" />
+                </div>
+              </a>
+              <a target="_blank" href="https://github.com/elvisanthonyy">
+                <div className="flex justify-center transition-all duration-300 hover:opacity-75 text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
+                  <FiGithub className="text-lighter-black" />
+                </div>
+              </a>
+              <a target="_blank" href="https://www.behance.net/elvisanthony1">
+                <div className="flex justify-center transition-all duration-300 hover:opacity-75 text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
+                  <FaBehance className="text-lighter-black" />
+                </div>
+              </a>
+
+              <a target="_blank" href="https://x.com/Elvizanthony">
+                <div className="flex justify-center transition-all duration-300 hover:opacity-75 text-xs items-center h-7 w-7 rounded-xl bg-back-gray">
+                  <FaXTwitter className="text-lighter-black" />
+                </div>
+              </a>
             </div>
           </div>
           <div className="flex items-center w-full px-4 md:px-6 h-10">
@@ -330,7 +343,7 @@ const Main = () => {
 
       <div
         onClick={handleScrollToTop}
-        className="fixed hidden right-10 bottom-10 justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white bg-black shadow-4xl backdrop-blur-2xl"
+        className="fixed flex right-10 bottom-10 justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white bg-black shadow-4xl backdrop-blur-2xl"
       >
         <FaAngleUp />
       </div>
