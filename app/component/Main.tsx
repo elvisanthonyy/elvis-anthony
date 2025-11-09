@@ -45,6 +45,7 @@ function useScrollAnimation() {
 
 const Main = () => {
   const { theme } = useTheme();
+  const [isScrolled, setIsScrolled] = useState(false);
   //const item1 = useScrollAnimation();
   const item2 = useScrollAnimation();
   const item3 = useScrollAnimation();
@@ -78,6 +79,17 @@ const Main = () => {
 
   useEffect(() => {
     //setIsButtonVisble(true);
+    const handleScroll = () => {
+      if (window.scrollY > 5) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -343,7 +355,9 @@ const Main = () => {
 
       <div
         onClick={handleScrollToTop}
-        className="fixed flex right-10 bottom-10 justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white bg-black shadow-4xl backdrop-blur-2xl"
+        className={`fixed z-40 ${
+          isScrolled ? "flex" : "hidden"
+        } right-10 bottom-10 justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white bg-black shadow-4xl backdrop-blur-2xl`}
       >
         <FaAngleUp />
       </div>
