@@ -51,15 +51,22 @@ const ProjectCard = ({
         </div>
         <div className="ml-3 flex items-center  m-0 w-[95%]">
           <SkillsButton name="HTML" />
+          {projectTitle === "Task-It" && <SkillsButton name="Next.js" />}
           <SkillsButton
             name={
-              projectTitle === "Collabify" || projectTitle === "Rift"
+              projectTitle === "Collabify" ||
+              projectTitle === "Rift" ||
+              projectTitle === "Task-It"
                 ? "Tailwind"
                 : "CSS"
             }
           />
           <SkillsButton
-            name={projectTitle === "Rift" ? "Node.js" : "Javascript"}
+            name={
+              projectTitle === "Rift" || projectTitle === "Task-It"
+                ? "Node.js"
+                : "Javascript"
+            }
           />
           {projectTitle === "Collabify" && <SkillsButton name="React" />}
           {projectTitle === "Rift" && <SkillsButton name="React" />}

@@ -46,7 +46,7 @@ function useScrollAnimation() {
 const Main = () => {
   const { theme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
-  //const item1 = useScrollAnimation();
+  const item1 = useScrollAnimation();
   const item2 = useScrollAnimation();
   const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
@@ -286,6 +286,22 @@ const Main = () => {
         MY PROJECTS
       </div>
       <div className="flex flex-col w-full justify-center lg:w-[70%] lg:px-[5%]  lg:gap-x-10 lg:grid-cols-2">
+        <div
+          ref={item1.ref}
+          className={`transition-all duration-700 w-full ease-in ${
+            item1.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ProjectCard
+            projectImageUrl="/task-it.png"
+            projectTitle="Task-It"
+            projectDescription="A website where you can login, create a to-do list with items tailored towards that list, built primarily using Next.js, MongoDB for database and tailwind for a beautiful UI."
+            demoUrl="https://task-it-six.vercel.app"
+            codeUrl="https://github.com/elvisanthonyy/task-it"
+          />
+        </div>
         <div
           ref={item5.ref}
           className={`transition-all w-full lg:w-full duration-700 ease-in ${
