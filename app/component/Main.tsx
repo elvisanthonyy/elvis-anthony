@@ -303,6 +303,22 @@ const Main = () => {
           />
         </div>
         <div
+          ref={item8.ref}
+          className={`transition-all duration-700 w-full ease-in ${
+            item8.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ProjectCard
+            projectImageUrl="/rift.png"
+            projectTitle="Rift"
+            projectDescription="A Full-Stack application made with, Node.js, Express.js and MongoDB on the backend and React.js on the frontend. This website allows users to create account send messages, create, like and view posts."
+            demoUrl="https://rift-client.vercel.app"
+            codeUrl="https://github.com/elvisanthonyy/rift"
+          />
+        </div>
+        <div
           ref={item5.ref}
           className={`transition-all w-full lg:w-full duration-700 ease-in ${
             item5.isVisible
@@ -349,22 +365,6 @@ const Main = () => {
             projectDescription="A a demo website to allow creators and businesses sign up for a waitlist that would enable collaboration. This was built using React"
             demoUrl="https://elvisanthonyy.github.io/collabify"
             codeUrl="https://github.com/elvisanthonyy/collabiy"
-          />
-        </div>
-        <div
-          ref={item8.ref}
-          className={`transition-all duration-700 w-full ease-in ${
-            item8.isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
-        >
-          <ProjectCard
-            projectImageUrl="/rift.jpg"
-            projectTitle="Rift"
-            projectDescription="A Full-Stack application made with, Node.js, Express.js and MongoDB on the backend and React.js on the frontend. This website allows users to create account send messages, create, like and view posts."
-            demoUrl="https://rift-client.vercel.app"
-            codeUrl="https://github.com/elvisanthonyy/rift"
           />
         </div>
       </div>
