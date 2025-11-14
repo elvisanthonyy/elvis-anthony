@@ -175,7 +175,8 @@ const Main = () => {
             I&apos;m Elvis, a <b>full-stack web developer based</b> in Abuja,
             Nigeria. I build apps end-to-end-clean code, clear and fast
             delivery. My focus: performance, accessibility, and scalability.
-         <div
+          </div>
+            <div
             className={`flex items-center text-sm ${
               theme === "light" ? "text-lighter-black" : "text-darkGray"
             }  px-4 md:px-6 md:mt-4 w-full h-10`}
