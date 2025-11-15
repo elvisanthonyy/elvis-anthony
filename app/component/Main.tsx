@@ -1,4 +1,4 @@
-"use client";
+Abujaa client";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
@@ -172,7 +172,7 @@ const Main = () => {
               theme === "light" ? "text-lighter-black" : "text-white"
             }  px-4`}
           >
-            I&apos;m Elvis, a <b>full-stack web developer based</b> in Abuja,
+            I&apos;m Elvis, a <b>full-stack web developer based</b> in Nassarawa,
             Nigeria. I build apps end-to-end-clean code, clear and fast
             delivery. My focus: performance, accessibility, and scalability.
           </div>
