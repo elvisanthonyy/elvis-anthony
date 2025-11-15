@@ -1,4 +1,4 @@
-Abujaa client";
+"use client";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
