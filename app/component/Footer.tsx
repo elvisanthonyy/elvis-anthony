@@ -1,4 +1,4 @@
-flex-colcolclient";
+"use client";
 import { useTheme } from "../context/ThemeContext";
 import React from "react";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -13,7 +13,7 @@ const Footer = ({ project, myContact }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <footer
-      className={`flex pb-20 flex-colex-col md:items-start md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
+      className={`flex pb-20 flex-col md:items-start md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
         theme === "light"
           ? "text-nav-gray bg-light-black"
           : "bg-nav-gray text-light-black"
