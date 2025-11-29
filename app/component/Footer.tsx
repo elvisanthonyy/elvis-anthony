@@ -13,11 +13,11 @@ const Footer = ({ project, myContact }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <footer
-      className={`flex pb-20 flex-col md:items-start md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
+      className={`flex px-5 pb-20 flex-col md:items-start md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
         theme === "light"
           ? "text-nav-gray bg-light-black"
           : "bg-nav-gray text-light-black"
-      }  w-full h-100`}
+      }  w-full w-full h-fit min-h-100`}
     >
       <div className="w-full flex md:items-center flex-col mt-5 md:flex-row md: justify-between">
         <div className="flex flex-col">
