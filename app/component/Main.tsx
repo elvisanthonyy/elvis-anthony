@@ -30,7 +30,7 @@ function useScrollAnimation() {
           setIsVisble(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -191,13 +191,14 @@ const Main = () => {
               <div className="mr-2">
                 <HiOutlineLocationMarker className="text-lg" />
               </div>
-              <div>Abuja, Nigeria</div>
+              <div>Nasarawa, Nigeria</div>
             </div>
           </div>
           <div className="absolute overflow-hidden rounded-2xl h-33 md:h-45 w-30 md:w-45 z-20 top-3 md:top-5 md:left-5 left-3 bg-amber-200">
             <Image
               height={132}
               width={120}
+              draggable={false}
               src={"/profile.jpg"}
               alt="profile image"
               className="md:w-45 md:h-50 object-cover"
@@ -287,6 +288,38 @@ const Main = () => {
       </div>
       <div className="flex flex-col w-full justify-center lg:w-[70%] lg:px-[5%]  lg:gap-x-10 lg:grid-cols-2">
         <div
+          ref={item5.ref}
+          className={`transition-all w-full lg:w-full duration-700 ease-in ${
+            item5.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ProjectCard
+            projectImageUrl="/lyricchurch.png"
+            projectTitle="Lyric Church"
+            projectDescription="A website to display a church information, activities, and to keep you updated on programs and series. Tt was made using, NextJs, Mongodb and Tailwind CSS"
+            demoUrl="https://lyricchurch.com.ng"
+            codeUrl="https://github.com/elvisanthonyy/lyricchurch"
+          />
+        </div>
+        <div
+          ref={item7.ref}
+          className={`transition-all duration-700  w-full ease-in ${
+            item7.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ProjectCard
+            projectImageUrl="/collabify.png"
+            projectTitle="Collabify"
+            projectDescription="A a demo website to allow creators and businesses sign up for a waitlist that would enable collaboration. This was built using React"
+            demoUrl="https://elvisanthonyy.github.io/collabify"
+            codeUrl="https://github.com/elvisanthonyy/collabiy"
+          />
+        </div>
+        <div
           ref={item1.ref}
           className={`transition-all duration-700 w-full ease-in ${
             item1.isVisible
@@ -318,22 +351,7 @@ const Main = () => {
             codeUrl="https://github.com/elvisanthonyy/rift"
           />
         </div>
-        <div
-          ref={item5.ref}
-          className={`transition-all w-full lg:w-full duration-700 ease-in ${
-            item5.isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
-        >
-          <ProjectCard
-            projectImageUrl="/lyricChurch.jpg"
-            projectTitle="Lyric Church"
-            projectDescription="A website to display a church information, activities, and to keep you updated on programs and series. Tt was made using HTML, CSS and Javascript"
-            demoUrl="https://lyricchurch.com.ng"
-            codeUrl="https://github.com/elvisanthonyy/lyricchurch"
-          />
-        </div>
+
         <div
           ref={item6.ref}
           className={`transition-all duration-700 w-full ease-in ${
@@ -341,32 +359,7 @@ const Main = () => {
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
           }`}
-        >
-          <ProjectCard
-            projectImageUrl="/texcom.jpg"
-            projectTitle="TexCom"
-            projectDescription="A website to see most popular phone and Laptop brand's latest release with most important spec. This was made using HTML, CSS, and Javascript"
-            demoUrl="https://elvisanthonyy.github.io/texcom"
-            codeUrl="https://github.com/elvisanthonyy/texcom"
-          />
-        </div>
-
-        <div
-          ref={item7.ref}
-          className={`transition-all duration-700  w-full ease-in ${
-            item7.isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          }`}
-        >
-          <ProjectCard
-            projectImageUrl="/collabify.png"
-            projectTitle="Collabify"
-            projectDescription="A a demo website to allow creators and businesses sign up for a waitlist that would enable collaboration. This was built using React"
-            demoUrl="https://elvisanthonyy.github.io/collabify"
-            codeUrl="https://github.com/elvisanthonyy/collabiy"
-          />
-        </div>
+        ></div>
       </div>
 
       <div

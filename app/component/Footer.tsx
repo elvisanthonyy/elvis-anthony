@@ -13,13 +13,13 @@ const Footer = ({ project, myContact }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <footer
-      className={`flex px-5 flex-col md:items-start md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
+      className={`flex px-5 pb-10 flex-col md:items-start text-center md:text-left md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-center justify-evenly ${
         theme === "light"
           ? "text-nav-gray bg-light-black"
           : "bg-nav-gray text-light-black"
-      }  w-full h-100`}
+      }  w-full min-h-100`}
     >
-      <div className="w-full flex md:items-center flex-col mt-5 md:flex-row md: justify-between">
+      <div className="w-full items-center flex md:items-center flex-col mt-5 md:flex-row md: justify-between">
         <div className="flex flex-col">
           <div className="text-xl font-bold mb-3">Elvis Anthony</div>
           <div className="text-sm w-80 mb-5">
