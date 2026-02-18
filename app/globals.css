@@ -11,8 +11,8 @@
   --breakpoint-sm: 390px;
   --breakpoint-md: 520px;
   --breakpoint-smd: 620px;
-  --color-nav-gray: #e7e7e7;
-  --color-back-gray: #f8f8f8;
+  --color-nav-gray: #dbdbdb;
+  --color-back-gray: #ededed;
   --color-darkGray: #8d8d8d;
   --color-darkerGray: #303030;
   --color-light-black: #1b1b1b;
@@ -34,7 +34,7 @@
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #ededed;
   color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
