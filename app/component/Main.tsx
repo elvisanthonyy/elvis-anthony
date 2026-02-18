@@ -298,7 +298,7 @@ const Main = () => {
           <ProjectCard
             projectImageUrl="/lyricchurch.png"
             projectTitle="Lyric Church"
-            projectDescription="A website to display a church information, activities, and to keep you updated on programs and series. Tt was made using, NextJs, Mongodb and Tailwind CSS"
+            projectDescription="A website to display a church information, activities, partner, view gallery and to keep you updated on programs and series. It was made using NextJs, Mongodb, Node.JS and Tailwind CSS"
             demoUrl="https://lyricchurch.com.ng"
             codeUrl="https://github.com/elvisanthonyy/lyricchurch"
           />
