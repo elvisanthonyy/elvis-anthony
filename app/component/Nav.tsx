@@ -12,7 +12,7 @@ const Nav = ({ contact }: ChildProps) => {
   const { theme, toggleTheme } = useTheme();
   return (
     <nav
-      className={`flex overflow-hidden absolute top-5 left-[50%] border-0 -translate-x-[50%] lg:w-[53%] justify-between rounded-2xl items-center z-10 pl-[5%] md:pl-10 w-[90%] md:w-[90%]  sm:w-[90%] h-11 md:h-13 ${
+      className={`flex overflow-hidden absolute top-5 left-[50%] md:top-10 border-0 -translate-x-[50%] lg:w-[53%] justify-between rounded-2xl items-center z-10 pl-[5%] md:pl-10 w-[90%] md:w-[90%]  sm:w-[90%] h-11 md:h-13 ${
         theme === "light" ? "bg-nav-gray" : "bg-darkerGray"
       }`}
     >
