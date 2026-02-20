@@ -313,7 +313,7 @@ const Main = () => {
           }`}
         >
           <ProjectCard
-            projectImageUrl="/BeatsByYehuda.png"
+            projectImageUrl="/beatsbyyehuda.png"
             projectTitle="BeatsByYehuda"
             projectDescription="A portfolio website for BeatsByYehuda to display and listens to his beats, and Contact Information, Made using NextJs, Mongodb, Node.JS and Tailwind CSS"
             demoUrl="https://yehuda.vercel.app"
@@ -464,7 +464,7 @@ const Main = () => {
             <div className="flex opacity-60 items-center w-[90%]">
                 <div className={`border-b w-full mx-4`}></div>
             </div>
-            <div className="flex shrink-0 ml-auto"> Abuja, Nigeria. </div>
+            <div className="flex shrink-0 ml-auto"> Nasarawa, Nigeria. </div>
           </div>
           <div
             className={`flex my-3 text-md ${

@@ -25,7 +25,7 @@ const ProjectCard = ({
         theme === "light" ? "bg-white" : "bg-lighter-black"
       }  shadow-3xl rounded-2xl `}
     >
-      <div className="flex mt-2 w-[95%] mx-auto md:h-[90%] md:ml-4 md:mt-0 md:rounded-bl-xl md:rounded-tr-none rounded-tl-xl md: rounded-tr-xl justify-center items-start overflow-hidden  h-[40%] bg-amber-400 md:w-[50%] xl:w-[50%]">
+      <div className="flex mt-2 w-[95%] mx-auto md:h-[90%] md:ml-4 md:mt-0 md:rounded-bl-xl md:rounded-tr-none rounded-tl-xl md: rounded-tr-xl justify-center items-start overflow-hidden  h-[40%] bg-gray-100 md:w-[50%] xl:w-[50%]">
         <Image
           src={projectImageUrl}
           alt="lyric image"
