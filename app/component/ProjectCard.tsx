@@ -51,34 +51,22 @@ const ProjectCard = ({
           {projectDescription}
         </div>
         <div className="mx-2 flex items-center flex-wrap  m-0 w-[95%]">
-          {projectTitle === "Lyric Church" ? (
+          <SkillsButton name="HTML" />
+          {projectTitle === "Lyrich Church" || projectTitle === "BeatsByYehuda" || projectTitle === "Task-It" ? (
             <SkillsButton name="Next.Js" />
           ) : (
-            <SkillsButton name="HTML" />
+            ""
           )}
-          {projectTitle === "Task-It" && <SkillsButton name="Next.js" />}
+          
           <SkillsButton
-            name={
-              projectTitle === "Collabify" ||
-              projectTitle === "Rift" ||
-              projectTitle === "Task-It" ||
-              projectTitle === "Lyric Church"
-                ? "Tailwind"
-                : "CSS"
-            }
+            name="Tailwind CSS"
           />
           <SkillsButton
-            name={
-              projectTitle === "Rift" ||
-              projectTitle === "Task-It" ||
-              projectTitle === "Lyric Church"
-                ? "Node.js"
-                : "Javascript"
-            }
+            name="Javascript"
           />
-          {projectTitle === "Collabify" && <SkillsButton name="React" />}
-          {projectTitle === "Lyric Church" && <SkillsButton name="MongoDB" />}
-          {projectTitle === "Rift" && <SkillsButton name="React" />}
+          {projectTitle === "Collabify" || projectTitle === "Rift" ? "" : <SkillsButton name="React" />}
+          {projectTitle === "Collabify" ? "" : <SkillsButton name="MongoDB" />}
+      
         </div>
         <div className="mx-2 flex items-center my-3 mb-5 flex-wrap  h-15 m-0 w-[80%] ">
           <a href={demoUrl} target="_blank">

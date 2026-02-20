@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
-import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaAngleUp } from "react-icons/fa";
@@ -16,6 +16,7 @@ import { TbBriefcase } from "react-icons/tb";
 import Nav from "./Nav";
 import { useTheme } from "../context/ThemeContext";
 import Footer from "./Footer";
+import Link from "next/link"
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -304,6 +305,22 @@ const Main = () => {
           />
         </div>
         <div
+          ref={item5.ref}
+          className={`transition-all w-full lg:w-full duration-700 ease-in ${
+            item5.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ProjectCard
+            projectImageUrl="/BeatsByYehuda.png"
+            projectTitle="BeatsByYehuda"
+            projectDescription="A portfolio website for BeatsByYehuda to display and listens to his beats, and Contact Information, Made using NextJs, Mongodb, Node.JS and Tailwind CSS"
+            demoUrl="https://yehuda.vercel.app"
+            codeUrl="https://github.com/elvisanthonyy/yehuda"
+          />
+        </div>
+        <div
           ref={item7.ref}
           className={`transition-all duration-700  w-full ease-in ${
             item7.isVisible
@@ -380,7 +397,7 @@ const Main = () => {
               : "opacity-0 translate-y-10"
           } ${
             theme === "light" ? "bg-white" : "bg-lighter-black"
-          } aspect-square text-sm w-full lg:w-[60%]  mx-auto flex flex-col justify-start lg:justify-center lg:h-95 py-10 md:py-0 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
+          } aspect-square text-sm w-full lg:w-[60%] md:px-20  mx-auto flex flex-col justify-start lg:justify-center lg:h-95 py-10 md:py-0 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
         >
           <div
             className={`flex flex-col mx-auto pb-5 md:pb-0 text-lg ${
@@ -392,67 +409,98 @@ const Main = () => {
           <div
             className={`flex my-3 text-md ${
               theme === "light" ? "text-lighter-black" : "text-white"
-            }  items-center w-[90%] lg:w-full`}
+            }  items-center w-[85%] lg:w-full`}
           >
             <FaLinkedin
-              className={`w-[20%] text-lg ${
+              className={`flex shrink-0 text-lg ${
                 theme === "light" ? "text-light-black" : "text-white"
               }  `}
             />
-            <div> Elvis Anthony </div>
+             <div className="flex opacity-60 items-center w-[90%]">
+                <div className={`border-b w-full mx-4`}></div>
+            </div>
+            <div className="flex shrink-0 ml-auto"> Elvis Anthony </div>
           </div>
           <div
             className={`flex my-3 text-md ${
               theme === "light" ? "text-lighter-black" : "text-white"
-            }  items-center w-[90%] lg:w-full`}
+            }  items-center w-[85%] lg:w-full`}
           >
             <FaInstagram
-              className={`w-[20%] text-lg ${
+              className={`flex shrink-0 text-lg ${
                 theme === "light" ? "text-light-black" : "text-white"
               }  `}
             />
-            <div> Iam_elvizanthony </div>
+             <div className="flex opacity-60 items-center w-[90%]">
+                <div className={`border-b w-full mx-4`}></div>
+            </div>
+            <div className="flex shrink-0 ml-auto"> Iam_elvizanthony </div>
           </div>
           <div
             className={`flex my-3 text-md ${
               theme === "light" ? "text-lighter-black" : "text-white"
-            }  items-center w-[90%] lg:w-full`}
+            }  items-center w-[85%] lg:w-full`}
           >
             <FaPhone
-              className={`w-[20%] text-lg ${
+              className={`text-lg flex shrink-0 ${
                 theme === "light" ? "text-light-black" : "text-white"
               }  `}
             />
-            <div> +234 906 481 2779 </div>
+            <div className="flex opacity-60 items-center w-[90%]">
+                <div className={`border-b w-full mx-4`}></div>
+            </div>
+            <div className="flex shrink-0 ml-auto"> +234 906 481 2779 </div>
           </div>
           <div
             className={`flex my-3 text-md ${
               theme === "light" ? "text-lighter-black" : "text-white"
-            }  items-center w-[90%] lg:w-full`}
+            }  items-center w-[85%] lg:w-full`}
           >
             <HiOutlineLocationMarker
-              className={`w-[20%] text-lg ${
+              className={`text-lg flex shrink-0 ${
                 theme === "light" ? "text-light-black" : "text-white"
               }  `}
             />
-            <div> Abuja, Nigeria. </div>
+            <div className="flex opacity-60 items-center w-[90%]">
+                <div className={`border-b w-full mx-4`}></div>
+            </div>
+            <div className="flex shrink-0 ml-auto"> Abuja, Nigeria. </div>
           </div>
           <div
             className={`flex my-3 text-md ${
               theme === "light" ? "text-lighter-black" : "text-white"
-            }  items-center w-[90%] lg:w-full`}
+            }  items-center w-[85%] lg:w-full`}
           >
             <BiLogoGmail
-              className={`w-[20%] text-lg ${
+              className={`flex shrink-0 text-lg ${
                 theme === "light" ? "text-light-black" : "text-white"
               }  `}
             />
-            <div> info.elvisanthony@gmail.com </div>
+            <div className="flex opacity-60 items-center w-[90%]">
+                <div className={`border-b w-full mx-4`}></div>
+            </div>
+            <div className="flex shrink-0 ml-auto"> info.elvisanthony@gmail.com </div>
           </div>
         </div>
       </div>
-      <div ref={hireMeRef} className="flex w-full mx-auto my-10">
-        <HireMe />
+      <div ref={hireMeRef} className="flex flex-col items-center w-full mx-auto my-10">
+        <Link target="_blank" className="md:w-[60%] lg:w-[30%] w-[90%]" href="https://wa.me/message/Z7QT2V66JO54B1">
+        <button className="cursor-pointer w-full flex items-center justify-center  rounded-lg bg-green-500 flex h-13">
+          <FaWhatsapp className={`text-2xl ${theme === "dark" ? "text-black" : "text-white"}`} />
+        </button>
+        </Link>
+        <a target="_blank" className="md:w-[60%] lg:w-[30%] w-[90%]" href="mailto:info.elvisanthony@gmail.com?subject=Hello%20Elvis">
+          <button
+        className={`flex cursor-pointer w-full mx-auto my-10 transition-all duration-500 ease-in-out justify-center items-center rounded-lg hover:rounded-4xl h-14 ${
+          theme === "light"
+            ? "bg-light-black text-nav-gray"
+            : "text-light-black bg-nav-gray"
+        } `}
+      >
+        Send Email
+      </button>
+        </a>
+        
       </div>
       <Footer
         project={handleScrollToProject}
