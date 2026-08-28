@@ -9,13 +9,13 @@ const SkillsButton = ({ name }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <div
-      className={`flex justify-center items-center min-w-13 w-fit px-3 h-7 mt-2 rounded-lg border-1 text-[10px] mr-2 ${
+      className={`flex justify-center items-center min-w-13 w-fit px-3 h-7 rounded-[12px]  text-[12px] ${
         theme === "light"
-          ? "border-black  text-black"
-          : "border-white  text-white"
+          ? "border-black border text-black"
+          : "bg-[#292929] border-0 text-white"
       } `}
     >
-      {name}
+      <p>{name}</p>
     </div>
   );
 };

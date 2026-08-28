@@ -13,17 +13,17 @@ const Footer = ({ project, myContact }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <footer
-      className={`flex px-5 pb-10 flex-col md:items-start text-center md:text-left md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-center justify-evenly ${
+      className={`flex px-5 pb-10 flex-col md:items-start text-start md:text-left md:px-[2%] md:pt-5 md:min-h-60 md:h-fit items-start justify-evenly ${
         theme === "light"
           ? "text-nav-gray bg-light-black"
           : "bg-nav-gray text-light-black"
       }  w-full min-h-100`}
     >
-      <div className="w-full items-center flex md:items-center flex-col mt-5 md:flex-row md: justify-between">
+      <div className="w-full items-start flex md:items-center flex-col mt-5 md:flex-row md: justify-between">
         <div className="flex flex-col">
-          <div className="text-xl font-bold mb-3">Elvis Anthony</div>
-          <div className="text-sm w-80 mb-5">
-            <span className="block mb-2 font-semibold italic">
+          <div className="text-xl font-bold text-left mb-3">Elvis Anthony</div>
+          <div className="text-sm text-left w-80 mb-5">
+            <span className="block  mb-2">
               Bringing products to life one pixel at a time
             </span>{" "}
             I&apos;m Elvis, a full-stack web developer based in Abuja, Nigeria.
@@ -31,7 +31,7 @@ const Footer = ({ project, myContact }: ChildProps) => {
           </div>
         </div>
 
-        <div className="h-30 md:h-30 flex  md:items-center flex-col md:w-90 text-left justify-between ">
+        <div className="h-30 md:h-30 flex item-start  md:items-center flex-col md:w-90 text-left justify-between ">
           <div
             onClick={() => {
               window.scrollTo({
