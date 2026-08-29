@@ -112,7 +112,7 @@ const Main = () => {
               Elvis Anthony
             </div>
             <div>
-              <HiCheckBadge className="text-[28px] text-[#00a2ff]" />
+              <HiCheckBadge className="text-[24px] text-[#00a2ff]" />
             </div>
           </div>
           <div
