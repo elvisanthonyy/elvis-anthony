@@ -21,12 +21,12 @@ const ProjectCard = ({
   const { theme } = useTheme();
   return (
     <div
-      className={`relative gap-4 p-2 flex md:items-center shadow-2xl/4 flex-col md:flex-row mx-auto overflow-hidden w-full md:h-75 lg:w-full xl:flex-row xl:h-80 md:aspect-auto ${
+      className={`relative gap-4 p-2 flex md:items-center shadow-2xl/4 flex-col lg:flex-row mx-auto overflow-hidden w-full lg:h-95 min-h-80 lg:w-full xl:flex-row  ${
         theme === "light" ? "bg-white" : "bg-lighter-black"
       }  shadow-3xl rounded-[20px] `}
     >
-      <div className="w-full ">
-        <div className="flex w-w-full mx-auto md:h-[90%] md:ml-4 md:mt-0 md:rounded-bl-xl md:rounded-tr-none rounded-[12px] md: rounded-tr-xl justify-center items-start overflow-hidden  h-[40%] bg-gray-100 md:w-[50%] xl:w-[50%]">
+      <div className="w-full md:h-full h-[40%] flex ">
+        <div className="flex w-full mx-auto h-full md:mt-0  rounded-[12px] justify-center items-start overflow-hidden  bg-gray-100">
           <Image
             src={projectImageUrl}
             alt="lyric image"
@@ -38,7 +38,7 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <div className="flex gap-2 flex-col shrink-0 md:h-full md:w-[50%] xl:w-[50%] xl:h-full h-[60%] px-1 w-full">
+      <div className="flex  gap-2 flex-col md:justify-center shrink-0 md:h-fit md:w-[70%] lg:w-[50%] md:mr-auto xl:w-[50%] xl:h-full h-[60%] px-1 w-full">
         <div
           className={`text-[18px] ${
             theme === "light" ? "text-black" : "text-white"
@@ -47,7 +47,7 @@ const ProjectCard = ({
           {projectTitle}
         </div>
         <div
-          className={`h-[60%] lg:h-[45%] lg:text-[1.1em] w-full  pr-8 text-[12px] md:text-[12px] lg:text-md ${
+          className={`h-[60%] lg:h-fit md:text-[14px] w-full  pr-8 text-[12px]lg:text-md ${
             theme === "light" ? "text-gray-800" : "text-[#cccccc]"
           } `}
         >
@@ -72,7 +72,7 @@ const ProjectCard = ({
           )}
           {projectTitle === "Collabify" ? "" : <SkillsButton name="MongoDB" />}
         </div>
-        <div className="flex items-center mt-2 flex-wrap m-0 w-full">
+        <div className="flex items-center mt-2 mb-1 flex-wrap m-0 w-full">
           <a href={demoUrl} target="_blank">
             <div
               className={`transition-all duration-300 shrink-0 ease-in flex px-4 justify-center items-center min-w-20  w-fit h-9 rounded-[12px] font-medium text-[14px] mr-2 ${

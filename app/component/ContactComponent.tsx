@@ -12,12 +12,14 @@ const ContactComponent = ({ Icon, name }: ChildProps) => {
   const { theme } = useTheme();
   return (
     <div
-      className={`flex gap-4 overflow-hidden text-md rounded-[16px] ${
-        theme === "light" ? "text-lighter-black" : "text-white bg-[#292929]"
+      className={`flex gap-4 overflow-hidden md:max-w-80 text-md rounded-[16px] ${
+        theme === "light"
+          ? "text-lighter-black bg-[#ededed]"
+          : "text-white bg-[#292929]"
       }  items-center w-full lg:w-full`}
     >
       <div
-        className={`h-full rounded-[12px] p-4 ${theme === "light" ? "" : "bg-[#1a1a1a]"} aspect-square`}
+        className={`h-full rounded-[12px] p-4 ${theme === "light" ? "bg-[#cecbcb]" : "bg-[#1a1a1a]"} aspect-square`}
       >
         <Icon
           className={`flex shrink-0 text-lg ${

@@ -11,47 +11,25 @@ import Nav from "./Nav";
 import { useTheme } from "../context/ThemeContext";
 import Footer from "./Footer";
 import ContactComponent from "./ContactComponent";
-import { projects, heroIcons, contactItems } from "@/libs/database";
+import { projects, heroIcons, contactItems, location } from "@/libs/database";
 import Reveal from "./Reveal";
 import WhatsappButton from "./WhatsappButton";
 import MailButton from "./MailButton";
 import HeroIcon from "./HeroIcon";
 
-function useScrollAnimation() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const [isVisible, setIsVisble] = useState(false);
-  useEffect(() => {
-    const currentRef = ref.current;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setIsVisble(true);
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, []);
-
-  return { ref, isVisible };
-}
-
 const Main = () => {
   const { theme } = useTheme();
+
+  //variable to store when page is scrolled
   const [isScrolled, setIsScrolled] = useState(false);
 
+  //refs for scrolled to sections
   const hireMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
-  //const [isButtonsVisible, setIsButtonVisble] = useState(false);
+
+  //scroll to sections
   const handleScrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -69,7 +47,7 @@ const Main = () => {
   };
 
   useEffect(() => {
-    //setIsButtonVisble(true);
+    //show scroll to top button when page is scrolled
     const handleScroll = () => {
       if (window.scrollY > 5) {
         setIsScrolled(true);
@@ -89,7 +67,8 @@ const Main = () => {
       className="flex flex-col items-center relative min-h-screen h-fit"
     >
       <Nav contact={() => handleScrollToHireMe?.()} />
-      <section className="block mt-5 pt-25 md:pt-30 md:mb-8 h-fit w-full md:w-full lg:w-[60%] items-center justify-center">
+      {/* Hero section*/}
+      <section className="block md:px-15 px-4 lg:px-0 mt-5 pt-18 md:pt-30 h-fit w-full lg:w-[60%] items-center justify-center">
         <div className="flex justify-center mx-auto relative w-fit h-fit">
           <div
             className={`flex items-center font-light font-e-light text-5xl sm:text-[3.2em] lg:text-8xl xl:text-9xl md:text-7xl smd:text-[5em] serif-font ${
@@ -104,7 +83,7 @@ const Main = () => {
         </div>
 
         <div
-          className={`relative -top-3 md:-top-5 lg:-top-7 shadow-2xl/4 mx-auto shrink-0 flex w-[90%] lg:w-full overflow-hidden  border-2 ${
+          className={`relative -top-3 md:-top-5 lg:-top-7 shadow-2xl/4 mx-auto shrink-0 flex w-full lg:w-full overflow-hidden  border-2 ${
             theme === "light"
               ? "border-white text-black bg-white"
               : "border-lighter-black bg-lighter-black"
@@ -133,20 +112,17 @@ const Main = () => {
               Elvis Anthony
             </div>
             <div>
-              <HiCheckBadge
-                className="text-lg text-blue-700
-              "
-              />
+              <HiCheckBadge className="text-[28px] text-[#00a2ff]" />
             </div>
           </div>
           <div
-            className={`w-full md:w-[95%]  md:mr-auto mt-2 md:px-6 h-25 text-sm md:text-lg ${
-              theme === "light" ? "text-lighter-black" : "text-white"
+            className={`w-full md:w-[95%]  md:mr-auto mt-2 md:px-6 min-h-25 text-sm md:text-lg ${
+              theme === "light" ? "text-lighter-black" : "text-[#e4e4e4]"
             }  px-4`}
           >
-            I&apos;m Elvis, a <b>full-stack web developer based</b> in Nasarawa,
+            {`I'm Elvis, a full-stack web developer based in ${location},
             Nigeria. I build apps end-to-end-clean code, clear and fast
-            delivery. My focus: performance, accessibility, and scalability.
+            delivery. My focus: performance, accessibility, and scalability.`}
           </div>
           <div
             className={`flex items-center text-sm ${
@@ -157,13 +133,13 @@ const Main = () => {
               <div className="mr-2">
                 <TbBriefcase className="text-lg" />
               </div>
-              <div>Web Developer</div>
+              <div>Software Engineer</div>
             </div>
             <div className="flex h-9 items-center">
               <div className="mr-2">
                 <HiOutlineLocationMarker className="text-lg" />
               </div>
-              <div>Nasarawa, Nigeria</div>
+              <div>{location}</div>
             </div>
           </div>
           <div className="absolute overflow-hidden rounded-2xl h-33 md:h-45 w-30 md:w-45 z-20 top-3 md:top-5 md:left-5 left-3 bg-amber-200">
@@ -179,86 +155,97 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="flex px-4 mt-5 flex-col gap-[20px] w-full lg:px-[3%] xl:grid lg:h-fit lg:gap-y-10 md:gap-x-0 lg:grid-cols-2 lg:w-[70%]  xl:place-items-center items-center">
+      {/* skill section*/}
+      <section className="px-4 md:px-15 lg:px-0 mt-5 lg:w-[60%]  items-center flex gap-4 flex-col w-full">
         <div
           ref={projectRef}
-          className={`flex flex-col pl-2 w-full mx-auto lg:py-5 lg:pt-10 text-[16px] ${
+          className={`flex flex-col pl-2 w-full mx-auto text-[16px] ${
             theme === "light" ? "text-lighter-black" : "text-white"
           }  font-semibold tracking-tight`}
         >
           MY SKILLS
         </div>
-        <Reveal>
-          <div
-            className={`transition-all shadow-2xl/4  duration-700 lg:mx-auto ease-in w-full  ${
-              theme === "light" ? "bg-white " : "bg-lighter-black"
-            } mx-auto md:mb-10 gap-4 lg:mb-0 h-fit pb-8 flex flex-col justify-start items-start p-4 rounded-[24px] `}
-          >
+        <div className="flex flex-col gap-[12px] w-full  xl:grid lg:h-fit lg:gap-y-3 lg:gap-x-3 md:gap-x-0 lg:grid-cols-2  xl:place-items-center items-center">
+          <Reveal>
             <div
-              className={`text-[16px] ${
-                theme === "light" ? "text-lighter-black " : "text-white"
-              } bg-[#1d1d1d] tracking-tight rounded-[8px] px-4 py-1 font-semibold`}
+              className={`transition-all xl:aspect-[4/3] shadow-2xl/4  duration-700 ease-in w-full  ${
+                theme === "light" ? "bg-white " : "bg-lighter-black"
+              } mx-auto gap-4 lg:mb-0 h-fit pb-8 flex flex-col justify-start items-start p-4 lg:w-auto  rounded-[24px] `}
             >
-              FRONTEND
+              <div
+                className={`text-[16px] ${
+                  theme === "light"
+                    ? "text-lighter-black bg-[#ededed]"
+                    : "text-white bg-[#2c2c2c]"
+                }  tracking-tight rounded-[8px] px-4 py-1 font-semibold`}
+              >
+                FRONTEND
+              </div>
+              <div className="w-full px-1 flex flex-col gap-3">
+                <Skill name={"HTML"} progress={100} />
+                <Skill name={"CSS"} progress={75} />
+                <Skill name={"Javascript"} progress={75} />
+                <Skill name={"Tailwind"} progress={75} />
+                <Skill name={"Typescript"} progress={50} />
+              </div>
             </div>
-            <div className="w-full px-1 flex flex-col gap-3">
-              <Skill name={"HTML"} progress={100} />
-              <Skill name={"CSS"} progress={75} />
-              <Skill name={"Javascript"} progress={75} />
-              <Skill name={"Tailwind"} progress={75} />
-              <Skill name={"Typescript"} progress={50} />
-            </div>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div
-            className={`transition-all shadow-2xl/4  duration-700 ease-in w-full md:h-80  ${
-              theme === "light" ? "bg-white " : "bg-lighter-black"
-            } mx-auto flex flex-col pb-8 md:h-90 justify-start p-4 items-start rounded-3xl lg:mb-0`}
-          >
+          </Reveal>
+          <Reveal>
             <div
-              className={`mb-4 text-lg ${
-                theme === "light" ? "text-lighter-black " : "text-white"
-              } font-semibold bg-[#1d1d1d] tracking-tight rounded-[8px] px-4 py-1`}
+              className={`transition-all lg:w-auto shadow-2xl/4  duration-700 ease-in w-full ${
+                theme === "light" ? "bg-white " : "bg-lighter-black"
+              } mx-auto flex flex-col pb-8 justify-start p-4 items-start xl:aspect-[4/3] rounded-3xl lg:mb-0`}
             >
-              BACKEND
+              <div
+                className={`mb-4 text-lg ${
+                  theme === "light"
+                    ? "text-lighter-black bg-[#ededed]"
+                    : "text-white bg-[#2c2c2c]"
+                } font-semibold  tracking-tight rounded-[8px] px-4 py-1`}
+              >
+                BACKEND
+              </div>
+              <div className="w-full px-1 flex flex-col gap-3">
+                <Skill name={"Node.js"} progress={75} />
+                <Skill name={"MongoDB"} progress={75} />
+                <Skill name={"SQL"} progress={50} />
+                <Skill name={"Tailwind"} progress={75} />
+                <Skill name={"Next.js"} progress={100} />
+                <Skill name={"Express.js"} progress={75} />
+              </div>
             </div>
-            <div className="w-full px-1 flex flex-col gap-3">
-              <Skill name={"Node.js"} progress={75} />
-              <Skill name={"MongoDB"} progress={75} />
-              <Skill name={"SQL"} progress={50} />
-              <Skill name={"Tailwind"} progress={75} />
-              <Skill name={"Next.js"} progress={100} />
-              <Skill name={"Express.js"} progress={75} />
-            </div>
-          </div>
-        </Reveal>
-        <Reveal>
-          <div
-            className={`transition-all shadow-2xl/4  duration-700 ease-in w-full md:h-80   ${
-              theme === "light" ? "bg-white " : "bg-lighter-black"
-            } mx-auto pb-8 flex flex-col md:h-90 justify-start p-4 items-start rounded-3xl lg:mb-0 `}
-          >
+          </Reveal>
+          <Reveal>
             <div
-              className={`mb-4 text-[16px] ${
-                theme === "light" ? "text-lighter-black " : "text-white"
-              } font-semibold bg-[#1d1d1d] tracking-tight rounded-[8px] px-4 py-1`}
+              className={`transition-all xl:aspect-[4/3] shadow-2xl/4  duration-700 ease-in w-full lg:w-auto  ${
+                theme === "light" ? "bg-white " : "bg-lighter-black"
+              } mx-auto pb-8 flex flex-col justify-start p-4 items-start rounded-3xl lg:mb-0 `}
             >
-              OTHERS
+              <div
+                className={`mb-4 text-[16px] ${
+                  theme === "light"
+                    ? "text-lighter-black bg-[#ededed]"
+                    : "text-white bg-[#2c2c2c]"
+                } font-semibold  tracking-tight rounded-[8px] px-4 py-1`}
+              >
+                OTHERS
+              </div>
+              <div className="w-full px-1 flex flex-col gap-3">
+                <Skill name={"GIT"} progress={75} />
+                <Skill name={"Figma"} progress={75} />
+                <Skill name={"Photoshop"} progress={50} />
+                <Skill name={"Illustrator"} progress={75} />
+              </div>
             </div>
-            <div className="w-full px-1 flex flex-col gap-3">
-              <Skill name={"GIT"} progress={75} />
-              <Skill name={"Figma"} progress={75} />
-              <Skill name={"Photoshop"} progress={50} />
-              <Skill name={"Illustrator"} progress={75} />
-            </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
-      <section className="w-full flex px-4 flex-col gap-3">
+
+      {/* Project section */}
+      <section className="w-full md:px-15  lg:w-[60%] lg:px-0 flex px-4 flex-col gap-3">
         <div
           ref={projectRef}
-          className={`flex flex-col mt-6 mb-3 mx-auto lg:py-5 lg:pt-10 text-[16px] ${
+          className={`flex flex-col mt-7 mb-1 mx-auto text-[16px] ${
             theme === "light" ? "text-lighter-black" : "text-white"
           }  font-semibold w-full px-2`}
         >
@@ -284,6 +271,7 @@ const Main = () => {
         <div className={`transition-all duration-700 w-full ease-in `}></div>
       </div>
 
+      {/* Scroll to the top */}
       <div
         onClick={handleScrollToTop}
         className={`fixed z-40 ${
@@ -296,17 +284,17 @@ const Main = () => {
       <Reveal>
         <div
           ref={contactRef}
-          className="w-full mt-6 border-t border-b border-[#646464]"
+          className={`w-full mt-8 ${
+            theme === "light" ? "text-lighter-black" : "text-white "
+          } lg:border-0 lg:rounded-[20px] border-t border-b border-[#646464]`}
         >
           <div
-            className={`transition-all duration-700 ease-in ${
+            className={`transition-all lg:border border-[#646464] duration-700 ease-in ${
               theme === "light" ? "bg-white" : "bg-lighter-black"
-            } aspect-square text-sm w-full lg:w-[60%] md:px-20  mx-auto flex flex-col justify-start lg:justify-center lg:h-95 px-4 py-4 md:py-0 md:h-80 items-start border-b-gray-400 border-t-gray-400`}
+            } pb-8 text-sm w-full h-fit mx-auto flex flex-col justify-start lg:justify-center lg:rounded-[20px] px-4 lg:w-[60%] md:px-15 py-4 items-start `}
           >
             <div
-              className={`flex w-full flex-col mx-auto pb-4 md:pb-0 text-lg ${
-                theme === "light" ? "text-lighter-black" : "text-white"
-              }  font-semibold`}
+              className={`flex w-full mb-4 flex-col mx-auto pb-4 md:pb-0 text-lg   font-semibold`}
             >
               CONTACT
             </div>
@@ -323,13 +311,13 @@ const Main = () => {
       </Reveal>
 
       <Reveal>
-        <div
+        <section
           ref={hireMeRef}
-          className="flex flex-col items-center w-full mx-auto my-10"
+          className="flex flex-col gap-4 lg:flex-row md:items-start md:px-15 lg:w-[60%] lg:px-0 items-center w-full mx-auto my-10"
         >
           <WhatsappButton />
           <MailButton />
-        </div>
+        </section>
       </Reveal>
       <Footer
         project={handleScrollToProject}

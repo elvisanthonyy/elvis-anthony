@@ -5,6 +5,7 @@ import { FaInstagram, FaPhone } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { BiLogoGmail } from "react-icons/bi";
 
+//data for projects
 export const projects = [
   {
     title: "Task-It",
@@ -32,6 +33,14 @@ export const projects = [
     codeUrl: "https://github.com/elvisanthonyy/yehuda",
   },
   {
+    title: "Max Gadgets",
+    description:
+      "An E-commerce website used to check and reserve laptop. You can create and account for free and place reservations.",
+    imageUrl: "/max-gadgets.png",
+    demoUrl: "https://max-gadgets.vercel.app",
+    codeUrl: "https://github.com/elvisanthonyy/max-gadgets",
+  },
+  {
     title: "Collabify",
     description:
       "A a demo website to allow creators and businesses sign up for a waitlist that would enable collaboration. This was built using React",
@@ -52,12 +61,13 @@ export const projects = [
     title: "Max Gadgets",
     description:
       "A website to display a church information, activities, partner, view gallery and to keep you updated on programs and series. It was made using NextJs, Mongodb, Node.JS and Tailwind CSS",
-    imageUrl: "/collabify",
+    imageUrl: "/max-gadgets.png",
     demoUrl: "https://lyricchurch.com.ng",
     codeUrl: "https://github.com/elvisanthonyy/lyricchurch",
   },
 ];
 
+//icons in hero section
 export const heroIcons = [
   {
     link: "",
@@ -78,6 +88,10 @@ export const heroIcons = [
   },
 ];
 
+//global location
+export const location: string = "Lagos, Nigeria.";
+
+//contact items
 export const contactItems = [
   {
     label: "Elvis Anthony",
@@ -92,7 +106,7 @@ export const contactItems = [
     icon: FaPhone,
   },
   {
-    label: "Lagos, Nigeria",
+    label: location,
     icon: HiLocationMarker,
   },
   {
