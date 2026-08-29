@@ -289,8 +289,10 @@ const Main = () => {
           } lg:border-0 lg:rounded-[20px] border-t border-b border-[#646464]`}
         >
           <div
-            className={`transition-all lg:border border-[#646464] duration-700 ease-in ${
-              theme === "light" ? "bg-white" : "bg-lighter-black"
+            className={`transition-all lg:border duration-700 ease-in ${
+              theme === "light"
+                ? "bg-white border-[#d8d8d8] "
+                : "bg-lighter-black border-[#646464] "
             } pb-8 text-sm w-full h-fit mx-auto flex flex-col justify-start lg:justify-center lg:rounded-[20px] px-4 lg:w-[60%] md:px-15 py-4 items-start `}
           >
             <div
