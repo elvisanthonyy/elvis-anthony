@@ -21,7 +21,7 @@ export const projects = [
     description:
       "A website to display a church information, activities, partner, view gallery and to keep you updated on programs and series. It was made using NextJs, Mongodb, Node.JS and Tailwind CSS",
     imageUrl: "/lyricchurch.png",
-    demoUrl: "https://lyricchurch.com.ng",
+    demoUrl: "https://lyrichchurch.vercel.app",
     codeUrl: "https://github.com/elvisanthonyy/lyricchurch",
   },
   {
@@ -56,14 +56,6 @@ export const projects = [
     imageUrl: "/rift.png",
     demoUrl: "https://rift-client.vercel.app",
     codeUrl: "https://github.com/elvisanthonyy/rift",
-  },
-  {
-    title: "Max Gadgets",
-    description:
-      "A website to display a church information, activities, partner, view gallery and to keep you updated on programs and series. It was made using NextJs, Mongodb, Node.JS and Tailwind CSS",
-    imageUrl: "/max-gadgets.png",
-    demoUrl: "https://lyricchurch.com.ng",
-    codeUrl: "https://github.com/elvisanthonyy/lyricchurch",
   },
 ];
 
