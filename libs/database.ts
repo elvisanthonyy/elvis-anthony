@@ -48,7 +48,9 @@ export const projects = [
     demoUrl: "https://lyricchurch.com.ng",
     codeUrl: "https://elvisanthonyy.github.io/collabify",
   },
+];
 
+const removedData = [
   {
     title: "Rift",
     description:
